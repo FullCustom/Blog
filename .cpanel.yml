@@ -1,0 +1,7 @@
+---
+ deplayment:
+  tasks:
+    - export DEPLOYPATH=/home2/narwhoau/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp -R _img $DEPLOYPATH
+    # Add _audio and _css if needed
