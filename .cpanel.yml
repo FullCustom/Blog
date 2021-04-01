@@ -1,5 +1,5 @@
 ---
- deplayment:
+ deployment:
   tasks:
     - export DEPLOYPATH=/home2/narwhoau/public_html/
     - /bin/cp index.html $DEPLOYPATH
