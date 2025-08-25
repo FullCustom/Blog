@@ -4,4 +4,6 @@
     - export DEPLOYPATH=/home2/narwhoau/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp -R _img $DEPLOYPATH
+    - /bin/cp -R _css $DEPLOYPATH
+    - /bin/CP -R _audio $DEPLOYPATH
     # Add _audio and _css if needed
