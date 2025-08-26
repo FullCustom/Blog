@@ -10,7 +10,7 @@
   <meta name="author" content="Timothy Eisenacher">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="_css/grok3.css">
+<link rel="stylesheet" href="_css/grok4.css">
 </head>
 <body>
 <!-- Mr Toad has come to town do you hear him croak? -->
@@ -76,7 +76,16 @@
     <section id="legacy-products" class="card">
      <h2>Legacy Products</h2>
      <h5>Last Updated, Aug 25, 2025</h5>
-     <div class="fakeimg"><img src="_img/panavise.jpg" alt="Narwhal Industries Legacy Products" class="img"></div>
+          <div class="fakeimg gallery-container">
+        <div class="gallery">
+          <img src="_img/barnacle.png" alt="Barnacle Fuzz pedal" class="gallery-img active">
+          <img src="_img/mr_toad.jpg" alt="Mr Toad" class="gallery-img">
+          <img src="_img/starfish.jpg" alt="Starfish Scrambler" class="gallery-img">
+          <img src="_img/pineapple.jpg" alt="Pineapple BC108 Fuzz pedal" class="gallery-img">
+        </div>
+        <button class="gallery-btn prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="gallery-btn next" onclick="changeImage(1)">&#10095;</button>
+      </div>
      <p>Explore our classic lineup of boutique effects and amps, handcrafted with care.</p>
      <table class="legacy-table">
      <tr><th>Product</th><th>Description</th><th>Year</th></tr>
@@ -123,6 +132,16 @@
   <p>Learn how at <a href="https://www.w3schools.com">www.w3schools.com</a></p>
   <p>Spot an issue? <a href="https://github.com/FullCustom">Contribute on GitHub</a>.</p>
 </footer>
+<script>
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.gallery-img');
+  const totalImages = images.length;
 
+  function changeImage(direction) {
+    images[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + direction + totalImages) % totalImages;
+    images[currentImageIndex].classList.add('active');
+  }
+</script>
 </body>
 </html>
