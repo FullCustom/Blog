@@ -1,0 +1,347 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Narwhal Industries - Strategic Roadmap</title>
+  <link href="favicon.png" rel="shortcut icon" />
+  <meta charset="utf-8">  
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Explore the strategic roadmap for Narwhal Industries, outlining our plan for incubation, product development, production scaling, and vertical integration as we craft boutique guitar effects pedals and amplifiers in Lemoyne, Pennsylvania.">
+  <meta name="keywords" content="Narwhal Industries, roadmap, boutique guitar pedals, amplifiers, manufacturing, Lemoyne, Pennsylvania, SBA 7(a) MARC loan, music equipment, horizontal integration, vertical integration">
+  <meta name="author" content="Timothy Eisenacher">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_css/grok4.css">
+  <!-- Marked.js for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+  <style>
+    /* Custom styles to match grok4.css card styling for markdown */
+    .markdown-body {
+      padding: 20px;
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    .markdown-body h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #000;
+    }
+    .markdown-body h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      color: #000;
+    }
+    .markdown-body h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      color: #333;
+    }
+    .markdown-body p, .markdown-body ul, .markdown-body li {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    .markdown-body ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    .markdown-body th, .markdown-body td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .markdown-body th {
+      background-color: #f5f5f5;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+<!-- Mr Toad has come to town do you hear him croak? -->
+<header class="header">
+  <h1>Narwhal Industries</h1>
+  <p>Handcrafted in Lemoyne, Pennsylvania</p>
+</header>
+
+<div class="row">
+  <div class="leftcolumn">
+    <section id="roadmap" class="card">
+      <h2>Strategic Roadmap</h2>
+      <h5>Last Updated, Sep 5, 2025</h5>
+      <div class="fakeimg"><img src="_img/narwhal.jpg" alt="Narwhal Industries workshop" class="img"></div>
+      <div class="markdown-body" id="roadmap-content">
+        <!-- Markdown content will be injected here -->
+      </div>
+    </section>
+  </div>
+  <div class="rightcolumn">
+    <section id="about" class="card">
+      <h2>About</h2>
+      <div class="fakeimg"><img src="_img/narwhal.jpg" alt="Narwhal Industries workshop" class="img"></div>
+      <p>Since 2010, musicians have enjoyed the exceptional sound of Narwhal Industries. To consistently deliver our great tone, we carefully select only high-quality electronic components and original designs to bring you unprecedented quality, full-bodied tone and feel. Our boutique lineup includes amplifiers, fuzz, overdrive, and boost pedals, handbuilt in Lemoyne, Pennsylvania. Reward yourself today with the quality, tone, and feel of Narwhal Industries. As a musician-owned business, we invite you to experience the unique quality of Narwhal Industries.</p>
+    </section>
+    <section id="links" class="card">
+      <h3>Popular Posts</h3>
+      <div class="fakeimg"><a href="index.html#link1"><h5>Business Model</h5></a></div>
+      <div class="fakeimg"><a href="index.html#link2"><h5>Dealer List</h5></a></div>
+      <div class="fakeimg"><a href="index.html#link3"><h5>Cardigan</h5></a></div>
+      <div class="fakeimg"><a href="#roadmap"><h5>Roadmap</h5></a></div>
+    </section>
+    <section id="follow" class="card">
+      <h3>Follow</h3>
+      <div class="fakeimg"><a href="https://www.facebook.com/narwhalind"><p>Narwhal-Ind</p></a></div>
+      <div class="fakeimg"><a href="https://www.facebook.com/fullcustommusic"><p>Full Custom Music Repair</p></a></div>
+      <div class="fakeimg"><a href="https://www.instagram.com/fullcustommusic"><p>Follow on Instagram</p></a></div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2025 Timothy Eisenacher. All rights reserved.</p>
+  <p>The internet thrives on handcrafted code by creators like you.</p>
+  <p>Learn how at <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+  <p>Spot an issue? <a href="https://github.com/FullCustom">Contribute on GitHub</a>.</p>
+  <p>Website enhanced with assistance from Grok, created by xAI.</p>
+</footer>
+
+<script>
+  // Markdown content (embedded for simplicity)
+  const markdownContent = `
+# Narwhal Industries Strategic Roadmap
+
+## 1. Incubation
+**Objective**: Establish a foundation for Narwhal Industries to transition from concept to operational startup.
+
+- **Market Research and Validation**:
+  - Conduct market sizing to identify high-growth opportunities in the manufacturing sector (NAICS 31-33, e.g., musical instrument manufacturing).
+  - Validate product-market fit through customer surveys, focus groups, and competitive analysis to ensure demand for custom music equipment or related products.
+  - Develop a minimum viable product (MVP) strategy to test market acceptance with minimal investment.
+- **Business Planning**:
+  - Draft a comprehensive business plan outlining vision, mission, target market, competitive differentiation, and financial projections.
+  - Engage fractional executives (e.g., via Narwhal Project) for strategic guidance on scaling and commercialization.
+- **Legal and Administrative Setup**:
+  - Establish Narwhal Industries as a legal entity (e.g., LLC or corporation) to facilitate future funding and operations.
+  - Secure necessary permits and certifications for manufacturing operations.
+- **Timeline**: 6-12 months.
+- **Key Deliverables**: Market research report, MVP prototype, business plan, legal entity formation.
+
+## 2. Product Development
+**Objective**: Design and refine innovative, high-quality products for the music equipment market.
+
+- **Product Design**:
+  - Develop a product line (e.g., amplifiers, effects pedals, or custom instruments) with strong competitive differentiation (e.g., superior sound quality, modular designs).
+  - Leverage customer feedback from MVP testing to refine product features.
+- **Prototyping and Testing**:
+  - Create and test prototypes to ensure reliability, performance, and manufacturability.
+  - Partner with engineering consultants to optimize product design for cost and scalability.
+- **Intellectual Property (IP)**:
+  - File patents or trademarks for unique designs, technologies, or branding to protect IP.
+  - Document all IP related to Full Custom Music Repair and Narwhal Industries for transfer to the new corporation.
+- **Timeline**: 12-18 months.
+- **Key Deliverables**: Finalized product designs, tested prototypes, IP filings.
+
+## 3. Horizontal Integrated Supply Line
+**Objective**: Build a horizontally integrated supply chain to streamline production and reduce costs.
+
+- **Supplier Identification**:
+  - Identify and contract reliable suppliers for raw materials (e.g., electronics, wood, metal components) and manufacturing components.
+  - Negotiate terms to ensure cost efficiency and scalability.
+- **Logistics and Distribution**:
+  - Establish partnerships with logistics providers to optimize supply chain efficiency.
+  - Implement inventory management systems to track materials and reduce waste.
+- **Horizontal Integration**:
+  - Integrate complementary processes (e.g., component assembly, quality control) within the supply chain to reduce dependency on external vendors.
+  - Explore partnerships with other manufacturers for shared resources or co-production to enhance efficiency.
+- **Timeline**: 12-24 months.
+- **Key Deliverables**: Supplier contracts, logistics framework, integrated supply chain model.
+
+## 4. Startup Formation
+**Objective**: Formalize Narwhal Industries as a scalable startup with a robust business structure.
+
+- **Business Structure**:
+  - Choose a corporate structure (e.g., C-Corp) to attract investors and facilitate growth.
+  - Establish a board of directors or advisory board with industry experts to guide strategic decisions.
+- **Management Team**:
+  - Recruit experienced management with expertise in manufacturing, operations, and finance.
+  - Ensure daily operations are managed by onsite principals or through a vetted management agreement compliant with SBA requirements.
+- **Financial Systems**:
+  - Implement accounting and financial reporting systems to track cash flow, expenses, and revenue.
+  - Prepare for SBA 7(a) MARC loan eligibility by documenting financials and ensuring compliance with NAICS 31-33 classification.
+- **Timeline**: 6-12 months.
+- **Key Deliverables**: Corporate structure, management team, financial systems.
+
+## 5. First Tier Funding
+**Objective**: Secure initial capital to fund operations and growth.
+
+- **Funding Sources**:
+  - Apply for a 7(a) MARC loan (up to $5M, with SBA guaranty up to $3.75M) to support working capital needs.
+  - Seek angel investors or venture capital (e.g., Narwhal Accelerator for up to $300k in gaming-related manufacturing).
+  - Explore non-dilutive financing options, such as venture debt or grants for manufacturing innovation.
+- **Financial Projections**:
+  - Prepare detailed projections showing debt service coverage ≥1:1 within 2 years, as required for MARC loans.
+  - Include historical financials (if applicable) and a pro-forma balance sheet to demonstrate repayment ability.
+- **Collateral and Equity**:
+  - Secure loans with liens on all business assets (excluding vehicles valued ≤$20,000 or with existing liens).
+  - Ensure sufficient equity investment to meet SBA requirements for loan approval.
+- **Timeline**: 6-12 months.
+- **Key Deliverables**: Secured funding, loan agreements, investor pitch deck.
+
+## 6. Disposal of Current Business
+**Objective**: Transition assets and operations from Full Custom Music Repair and Narwhal Industries to the new corporation.
+
+- **Asset and IP Transfer**:
+  - Transfer all assets (e.g., equipment, inventory) and IP (e.g., designs, trademarks) to the new corporation.
+  - Document transfers to ensure compliance with SBA regulations and investor requirements.
+- **Unnecessary Asset Disposal**:
+  - Identify and sell or dispose of non-essential assets (e.g., outdated equipment, excess inventory) to streamline operations.
+  - Use proceeds to reduce debt or fund working capital.
+- **Rebranding Repair Business**:
+  - Limit the scope of the repair business and rebrand it as the "Custom Shop" to focus on high-value, niche repair services.
+  - Develop a new brand identity and marketing strategy for the Custom Shop.
+- **Timeline**: 6-12 months.
+- **Key Deliverables**: Asset transfer agreements, disposal records, Custom Shop branding materials.
+
+## 7. Production
+**Objective**: Scale production through high-volume, horizontally integrated manufacturing and imported production.
+
+- **High-Volume Horizontally Integrated Production**:
+  - Establish a production facility with integrated processes (e.g., assembly, testing, packaging) to maximize efficiency.
+  - Implement quality control systems to ensure product consistency and customer satisfaction.
+- **Import Production from Ceriatone**:
+  - Partner with Ceriatone (or similar manufacturers) to import pre-assembled components or finished products to supplement in-house production.
+  - Negotiate contracts to ensure cost-effectiveness and quality standards.
+- **Capacity Planning**:
+  - Forecast production needs based on market demand and sales projections.
+  - Invest in scalable equipment and technology to support high-volume production.
+- **Timeline**: 18-36 months.
+- **Key Deliverables**: Production facility setup, Ceriatone partnership agreements, quality control systems.
+
+## 8. Second Tier Funding
+**Objective**: Secure additional capital to scale production and operations.
+
+- **Funding Sources**:
+  - Request a MARC loan increase post-annual review if financials support higher borrowing capacity.
+  - Seek second-round venture capital or private equity to fund expansion.
+  - Explore bond issuance or other debt instruments for long-term financing.
+- **Use of Funds**:
+  - Finance production scaling, new equipment, and expanded facilities.
+  - Support marketing and distribution efforts to enter new markets.
+- **Timeline**: 12-24 months.
+- **Key Deliverables**: Additional funding secured, updated financial projections.
+
+## 9. Returns
+**Objective**: Generate returns for stakeholders and reinvest in growth.
+
+- **Loan Repayment**:
+  - Prioritize repayment of 7(a) MARC loans using cash flow, ensuring debt service coverage ≥1:1.
+  - Refinance any fixed asset purchases discovered in revolving loans into term loans within 90 days.
+- **Bond Rollover**:
+  - If bonds were issued, roll over maturing bonds to maintain liquidity and fund ongoing operations.
+- **Shareholder Returns**:
+  - Distribute profits to shareholders based on performance and investor agreements.
+  - Consider stock buybacks or dividends to enhance shareholder value.
+- **Reinvestment**:
+  - Allocate profits to the next production cycle, focusing on vertical integration (e.g., owning distribution channels or manufacturing facilities).
+  - Fund R&D for new product lines to maintain competitive differentiation.
+- **Timeline**: Ongoing, starting 24-36 months post-funding.
+- **Key Deliverables**: Loan repayment schedule, bond rollover plan, shareholder return policy.
+
+## 10. Vertical Integration and Staffing
+**Objective**: Enhance control over the value chain and build a skilled workforce.
+
+- **Vertical Integration**:
+  - Acquire or develop capabilities in key areas (e.g., distribution, retail, or component manufacturing) to reduce costs and improve margins.
+  - Implement systems to integrate vertically aligned processes with existing horizontal supply chains.
+- **Hire Additional Staff**:
+  - Recruit skilled personnel for production, quality control, and management roles.
+  - Use SBA job creation metrics to report new hires (full-time or equivalent employees, per 13 CFR § 121.106).
+  - Provide training to ensure staff alignment with production and quality goals.
+- **Timeline**: 24-48 months.
+- **Key Deliverables**: Vertical integration plan, hiring plan, training programs.
+
+## Financial and Compliance Notes
+- **SBA 7(a) MARC Loan Compliance**:
+  - Ensure eligibility as a manufacturer (NAICS 31-33) and use proceeds solely for working capital.
+  - Maintain detailed financial records, including 3 years of historical financials or projections showing debt service coverage ≥1:1 within 2 years.
+  - Conduct annual reviews for revolving loans to assess cash flow, collateral, and compliance.
+- **Performance Metrics**:
+  - Track key financial ratios (e.g., current ratio, debt/tangible net worth, inventory turnover) and compare to industry trends.
+  - Monitor operating cash flow (EBITDA) to ensure repayment ability.
+- **Risk Management**:
+  - Secure business hazard and liability insurance; evaluate need for life insurance on key personnel.
+  - Address any liens, judgments, or litigation to maintain eligibility.
+
+## Timeline Summary
+| Phase                     | Duration       | Start (Estimated) |
+|---------------------------|----------------|-------------------|
+| Incubation                | 6-12 months    | Q1 2026          |
+| Product Development       | 12-18 months   | Q3 2026          |
+| Horizontal Supply Line    | 12-24 months   | Q1 2027          |
+| Startup Formation         | 6-12 months    | Q3 2026          |
+| First Tier Funding        | 6-12 months    | Q1 2027          |
+| Disposal of Current Business | 6-12 months  | Q3 2027          |
+| Production                | 18-36 months   | Q1 2028          |
+| Second Tier Funding       | 12-24 months   | Q1 2029          |
+| Returns                   | Ongoing        | Q3 2029          |
+| Vertical Integration & Staffing | 24-48 months | Q1 2029       |
+
+## Key Assumptions
+- Narwhal Industries operates in the music equipment manufacturing sector (NAICS 31-33).
+- Access to SBA 7(a) MARC loans for working capital, with potential for additional funding via venture capital or bonds.
+- Successful transfer of assets and IP from Full Custom Music Repair and Narwhal Industries to the new corporation.
+- Market demand supports high-volume production and import partnerships with Ceriatone.
+  `;
+
+  // Render markdown to HTML
+  document.getElementById('roadmap-content').innerHTML = marked.parse(markdownContent);
+</script>
+</body>
+</html>
