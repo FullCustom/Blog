@@ -6,4 +6,5 @@
     - /bin/cp -R _img $DEPLOYPATH
     - /bin/cp -R _css $DEPLOYPATH
     - /bin/CP -R _audio $DEPLOYPATH
+    - /bin/cp -R _data $DEPLOYPATH
     # Add _audio and _css if needed
