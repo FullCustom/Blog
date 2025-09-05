@@ -1,11 +1,15 @@
----
- deployment:
+deployment:
   tasks:
     - export DEPLOYPATH=/home2/narwhoau/public_html/
     - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp -R roadmap.html $DEPLOYPATH
-    - /bin/cp -R _img $DEPLOYPATH
-    - /bin/cp -R _css $DEPLOYPATH
-    - /bin/CP -R _audio $DEPLOYPATH
-    - /bin/cp -R _data $DEPLOYPATH
-    # Add _audio and _css if needed
+    - /bin/cp roadmap.html $DEPLOYPATH
+    - /bin/cp favicon.png $DEPLOYPATH
+    - /bin/cp -r _img $DEPLOYPATH
+    - /bin/cp -r _css $DEPLOYPATH
+    - /bin/cp -r _audio $DEPLOYPATH
+    - /bin/cp -r _data $DEPLOYPATH
+    - /bin/cp -r _js $DEPLOYPATH
+    - /bin/chmod -R 644 $DEPLOYPATH/*.html $DEPLOYPATH/favicon.png
+    - /bin/chmod -R 644 $DEPLOYPATH/_img/* $DEPLOYPATH/_css/* $DEPLOYPATH/_audio/* $DEPLOYPATH/_data/* $DEPLOYPATH/_js/*
+    - /bin/chmod -R 755 $DEPLOYPATH/_img $DEPLOYPATH/_css $DEPLOYPATH/_audio $DEPLOYPATH/_data $DEPLOYPATH/_js
+    - echo "Deployment completed successfully"
