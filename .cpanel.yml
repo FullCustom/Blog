@@ -3,6 +3,7 @@ deployment:
     - export DEPLOYPATH=/home2/narwhoau/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp roadmap.html $DEPLOYPATH
+    - /bin/cp reverb-proxy.php $DEPLOYPATH
     - /bin/cp favicon.png $DEPLOYPATH
     - /bin/cp -r _img $DEPLOYPATH
     - /bin/cp -r _css $DEPLOYPATH
