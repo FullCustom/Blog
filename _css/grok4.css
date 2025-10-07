@@ -3,6 +3,9 @@
   box-sizing: border-box;
 }
 
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 /* Body: Retain current background */
 body {
   font-family: 'Lato', sans-serif;
@@ -181,7 +184,7 @@ audio {
 }
 
 /* Table: For Dealer List and Legacy Products */
-table, .legacy-table {
+table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
@@ -198,6 +201,101 @@ th {
   color: #FFFFFF;
 }
 
+/* Reverb Section (Aligned with .card) */
+.reverb-section {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.reverb-section h1 {
+  color: #1A1A1A;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.reverb-section p {
+  color: #1A1A1A;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.reverb-section p a {
+  color: #2B3A67; /* Matches site link color */
+  text-decoration: none;
+}
+
+.reverb-section p a:hover {
+  color: #FF6F61; /* Matches site link hover */
+  text-decoration: underline;
+}
+
+.reverb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.reverb-card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.reverb-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.reverb-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px; /* Matches .img */
+  margin-bottom: 10px;
+}
+
+.reverb-card h3 {
+  font-size: 1.1em;
+  margin: 0 0 5px;
+  color: #1A1A1A;
+}
+
+.reverb-card .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1A1A1A; /* Changed from #0066cc to match body text */
+  margin: 5px 0;
+}
+
+.reverb-card .shop {
+  color: #1A1A1A;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.buy-btn {
+  background-color: #FF6F61; /* Matches cta-button */
+  color: #FFFFFF;
+  padding: 0.8rem 1.5rem; /* Matches cta-button */
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+.buy-btn:hover {
+  background-color: #E55A4E; /* Matches cta-button hover */
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
   .leftcolumn, .rightcolumn {
@@ -207,7 +305,7 @@ th {
   .header {
     font-size: 2rem;
   }
-  .card {
+  .card, .reverb-section {
     padding: 1rem;
   }
   nav a {
@@ -216,6 +314,9 @@ th {
   .gallery-btn {
     padding: 8px;
     font-size: 1rem;
+  }
+  .reverb-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -236,102 +337,3 @@ th {
   height: 100%;
   border: 0; /* Ensure no border conflicts */
 }
-/* Reverb CSS */
-.reverb-section {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 900px;
-      text-align: center;
-    }
-
-    .reverb-section h1 {
-      color: #333;
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-
-    .reverb-section p {
-      color: #555;
-      font-size: 1em;
-      margin-bottom: 20px;
-    }
-
-    .reverb-section p a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    .reverb-section p a:hover {
-      text-decoration: underline;
-    }
-
-    .reverb-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin: 20px 0;
-    }
-
-    .reverb-card {
-      background: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center;
-      transition: box-shadow 0.2s ease;
-    }
-
-    .reverb-card:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .reverb-card img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-
-    .reverb-card h3 {
-      font-size: 1.1em;
-      margin: 0 0 5px;
-      color: #333;
-    }
-
-    .reverb-card .price {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #0066cc;
-      margin: 5px 0;
-    }
-
-    .reverb-card .shop {
-      color: #666;
-      font-size: 0.9em;
-      margin: 5px 0;
-    }
-
-    .buy-btn {
-      display: inline-block;
-      background: #0066cc;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      margin-top: 10px;
-      transition: background 0.2s ease;
-    }
-
-    .buy-btn:hover {
-      background: #0052a3;
-    }
-
-    @media (max-width: 768px) {
-      .reverb-section { padding: 15px; }
-      .reverb-grid { grid-template-columns: 1fr; }
-    }
