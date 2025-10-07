@@ -1,5 +1,5 @@
  async function loadReverbListings() {
-  const apiUrl = 'https://narwhalindustries.net/reverb-proxy.php'; // Use HTTPS for security
+  const apiUrl = 'https://www.narwhalindustries.net/reverb-proxy.php'; // Use HTTPS for security
   const awinMid = 67144; // Reverb merchant ID
   const awinAffId = 2579497; // Your publisher ID
   const awinBase = `https://www.awin1.com/cread.php?awinmid=${encodeURIComponent(awinMid)}&awinaffid=${encodeURIComponent(awinAffId)}&ued=`;
