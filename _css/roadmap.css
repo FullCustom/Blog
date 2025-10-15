@@ -28,7 +28,17 @@
   color: #333;
 }
 
-.markdown-body p,
+.markdown-body img {
+  float: left;
+  margin: 1em;
+}
+
+.markdown-body p {
+    margin-bottom: 1em;
+    text-indent: 2em; /* Adds indent to first line of paragraphs */
+    text-align: justify;
+    text-justify: inter-word;
+}
 .markdown-body ul,
 .markdown-body li {
   font-size: 1rem;

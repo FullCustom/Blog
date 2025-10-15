@@ -6,7 +6,7 @@ The lastest news about Narwhal Industries will appear in this card. Check back o
 
 # A Barnacle Out in the Wild
 
-[![Original Barnacle](/_img/md_barnaclebill.jpg)](https://www.awin1.com/cread.php?awinmid=67144&awinaffid=2579497&ued=https%3A%2F%2Freverb.com%2Fitem%2F92219419-full-custom-music-barnacle-fuzz-pedal-2010-s-ted)
+[![Original Barnacle](/_img/md_barnaclebill.jpg "Barnacle")](https://www.awin1.com/cread.php?awinmid=67144&awinaffid=2579497&ued=https%3A%2F%2Freverb.com%2Fitem%2F92219419-full-custom-music-barnacle-fuzz-pedal-2010-s-ted)
 
 [First-run Original Barnacle Fuzz on Reverb](https://www.awin1.com/cread.php?awinmid=67144&awinaffid=2579497&ued=https%3A%2F%2Freverb.com%2Fitem%2F92219419-full-custom-music-barnacle-fuzz-pedal-2010-s-ted)
 

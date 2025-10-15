@@ -70,12 +70,6 @@ nav a:hover {
   margin-top: 20px;
   border: 1px solid #D9D9D9;
   border-radius: 8px;
-  p {
-    margin-bottom: 1em;
-    text-indent: 2em; /* Adds indent to first line of paragraphs */
-    text-align: justify;
-    text-justify: inter-word;
-}
 }
 
 /* Fakeimg: Border for images */
