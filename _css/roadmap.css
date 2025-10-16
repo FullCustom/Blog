@@ -29,8 +29,22 @@
 }
 
 .markdown-body img {
-  float: left;
-  margin: 1em;
+  max-width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 1em;
+    border: 1px solid #5a3d2b;
+    border-radius: 5px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .markdown-body img {
+        float: none; /* Remove float to prevent indentation/wrapping issues */
+        margin: 1em auto; /* Center horizontally with auto left/right, keep vertical spacing */
+        display: block; /* Ensure it behaves as a block element */
+    }
 }
 
 .markdown-body p {
