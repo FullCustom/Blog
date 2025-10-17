@@ -4,12 +4,12 @@
 **Objective**: Establish a foundation for Narwhal Industries to transition from concept to operational startup.
 
 - **Market Research and Validation**:
-  - Conduct market sizing to identify high-growth opportunities in the manufacturing sector (NAICS 31-33, e.g., musical instrument manufacturing).[](https://narwhalproject.org/)
+  - Conduct market sizing to identify high-growth opportunities in the manufacturing sector (NAICS 31-33, e.g., musical instrument manufacturing).
   - Validate product-market fit through customer surveys, focus groups, and competitive analysis to ensure demand for custom music equipment or related products.
-  - Develop a minimum viable product (MVP) strategy to test market acceptance with minimal investment.[](https://www.narwhalhub.com/en)
+  - Develop a minimum viable product (MVP) strategy to test market acceptance with minimal investment.
 - **Business Planning**:
   - Draft a comprehensive business plan outlining vision, mission, target market, competitive differentiation, and financial projections.
-  - Engage fractional executives (e.g., via Narwhal Project) for strategic guidance on scaling and commercialization.[](https://narwhalproject.org/)
+  - Engage fractional executives (e.g., via Narwhal Project) for strategic guidance on scaling and commercialization.
 - **Legal and Administrative Setup**:
   - Establish Narwhal Industries as a legal entity (e.g., LLC or corporation) to facilitate future funding and operations.
   - Secure necessary permits and certifications for manufacturing operations.
@@ -20,7 +20,7 @@
 **Objective**: Design and refine innovative, high-quality products for the music equipment market.
 
 - **Product Design**:
-  - Develop a product line (e.g., amplifiers, effects pedals, or custom instruments) with strong competitive differentiation (e.g., superior sound quality, modular designs).[](https://ca.linkedin.com/company/narwhal-project)
+  - Develop a product line (e.g., amplifiers, effects pedals, or custom instruments) with strong competitive differentiation (e.g., superior sound quality, modular designs).
   - Leverage customer feedback from MVP testing to refine product features.
 - **Prototyping and Testing**:
   - Create and test prototypes to ensure reliability, performance, and manufacturability.
@@ -54,10 +54,10 @@
   - Establish a board of directors or advisory board with industry experts to guide strategic decisions.
 - **Management Team**:
   - Recruit experienced management with expertise in manufacturing, operations, and finance.
-  - Ensure daily operations are managed by onsite principals or through a vetted management agreement compliant with SBA requirements.[](https://narwhalproject.org/)
+  - Ensure daily operations are managed by onsite principals or through a vetted management agreement compliant with SBA requirements.
 - **Financial Systems**:
   - Implement accounting and financial reporting systems to track cash flow, expenses, and revenue.
-  - Prepare for SBA 7(a) MARC loan eligibility by documenting financials and ensuring compliance with NAICS 31-33 classification.[](https://narwhalproject.org/)
+  - Prepare for SBA 7(a) MARC loan eligibility by documenting financials and ensuring compliance with NAICS 31-33 classification.
 - **Timeline**: 6-12 months.
 - **Key Deliverables**: Corporate structure, management team, financial systems.
 
@@ -65,14 +65,14 @@
 **Objective**: Secure initial capital to fund operations and growth.
 
 - **Funding Sources**:
-  - Apply for a 7(a) MARC loan (up to $5M, with SBA guaranty up to $3.75M) to support working capital needs.[](https://narwhalproject.org/)
-  - Seek angel investors or venture capital (e.g., Narwhal Accelerator for up to $300k in gaming-related manufacturing).[](https://narwhal.ax/)
-  - Explore non-dilutive financing options, such as venture debt or grants for manufacturing innovation.[](https://www.nahar.om/)
+  - Apply for a 7(a) MARC loan (up to $5M, with SBA guaranty up to $3.75M) to support working capital needs.
+  - Seek angel investors or venture capital (e.g., Narwhal Accelerator for up to $300k in gaming-related manufacturing).
+  - Explore non-dilutive financing options, such as venture debt or grants for manufacturing innovation.
 - **Financial Projections**:
-  - Prepare detailed projections showing debt service coverage ≥1:1 within 2 years, as required for MARC loans.[](https://narwhalproject.org/)
+  - Prepare detailed projections showing debt service coverage ≥1:1 within 2 years, as required for MARC loans.
   - Include historical financials (if applicable) and a pro-forma balance sheet to demonstrate repayment ability.
 - **Collateral and Equity**:
-  - Secure loans with liens on all business assets (excluding vehicles valued ≤$20,000 or with existing liens).[](https://narwhalproject.org/)
+  - Secure loans with liens on all business assets (excluding vehicles valued ≤$20,000 or with existing liens).
   - Ensure sufficient equity investment to meet SBA requirements for loan approval.
 - **Timeline**: 6-12 months.
 - **Key Deliverables**: Secured funding, loan agreements, investor pitch deck.
@@ -111,7 +111,7 @@
 **Objective**: Secure additional capital to scale production and operations.
 
 - **Funding Sources**:
-  - Request a MARC loan increase post-annual review if financials support higher borrowing capacity.[](https://narwhalproject.org/)
+  - Request a MARC loan increase post-annual review if financials support higher borrowing capacity.
   - Seek second-round venture capital or private equity to fund expansion.
   - Explore bond issuance or other debt instruments for long-term financing.
 - **Use of Funds**:
@@ -124,8 +124,8 @@
 **Objective**: Generate returns for stakeholders and reinvest in growth.
 
 - **Loan Repayment**:
-  - Prioritize repayment of 7(a) MARC loans using cash flow, ensuring debt service coverage ≥1:1.[](https://narwhalproject.org/)
-  - Refinance any fixed asset purchases discovered in revolving loans into term loans within 90 days.[](https://narwhalproject.org/)
+  - Prioritize repayment of 7(a) MARC loans using cash flow, ensuring debt service coverage ≥1:1.
+  - Refinance any fixed asset purchases discovered in revolving loans into term loans within 90 days.
 - **Bond Rollover**:
   - If bonds were issued, roll over maturing bonds to maintain liquidity and fund ongoing operations.
 - **Shareholder Returns**:
@@ -145,22 +145,22 @@
   - Implement systems to integrate vertically aligned processes with existing horizontal supply chains.
 - **Hire Additional Staff**:
   - Recruit skilled personnel for production, quality control, and management roles.
-  - Use SBA job creation metrics to report new hires (full-time or equivalent employees, per 13 CFR § 121.106).[](https://narwhalproject.org/)
+  - Use SBA job creation metrics to report new hires (full-time or equivalent employees, per 13 CFR § 121.106).
   - Provide training to ensure staff alignment with production and quality goals.
 - **Timeline**: 24-48 months.
 - **Key Deliverables**: Vertical integration plan, hiring plan, training programs.
 
 ## Financial and Compliance Notes
 - **SBA 7(a) MARC Loan Compliance**:
-  - Ensure eligibility as a manufacturer (NAICS 31-33) and use proceeds solely for working capital.[](https://narwhalproject.org/)
-  - Maintain detailed financial records, including 3 years of historical financials or projections showing debt service coverage ≥1:1 within 2 years.[](https://narwhalproject.org/)
-  - Conduct annual reviews for revolving loans to assess cash flow, collateral, and compliance.[](https://narwhalproject.org/)
+  - Ensure eligibility as a manufacturer (NAICS 31-33) and use proceeds solely for working capital.
+  - Maintain detailed financial records, including 3 years of historical financials or projections showing debt service coverage ≥1:1 within 2 years.
+  - Conduct annual reviews for revolving loans to assess cash flow, collateral, and compliance.
 - **Performance Metrics**:
-  - Track key financial ratios (e.g., current ratio, debt/tangible net worth, inventory turnover) and compare to industry trends.[](https://narwhalproject.org/)
-  - Monitor operating cash flow (EBITDA) to ensure repayment ability.[](https://narwhalproject.org/)
+  - Track key financial ratios (e.g., current ratio, debt/tangible net worth, inventory turnover) and compare to industry trends.
+  - Monitor operating cash flow (EBITDA) to ensure repayment ability.
 - **Risk Management**:
-  - Secure business hazard and liability insurance; evaluate need for life insurance on key personnel.[](https://narwhalproject.org/)
-  - Address any liens, judgments, or litigation to maintain eligibility.[](https://narwhalproject.org/)
+  - Secure business hazard and liability insurance; evaluate need for life insurance on key personnel.
+  - Address any liens, judgments, or litigation to maintain eligibility.
 
 ## Timeline Summary
 | Phase                     | Duration       | Start (Estimated) |
