@@ -83,3 +83,33 @@
   font-weight: 700;
   color: #000; /* Darker text color for better readability */
 }
+/* For Ads */
+.markdown-body .ads {
+  max-width: 100%;
+  overflow: hidden;  /* Hides any excess content */
+  margin-bottom: 15px;  /* Space between ads */
+  display: flex;          /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically if needed */
+}
+
+.markdown-body .ads img {
+  max-width: 100%;
+  height: auto;
+  display: block;  /* Prevents inline gaps */
+}
+
+.markdown-body .ads iframe {
+  width: 100%;
+  height: auto;  /* Or set a fixed height like 250px if needed */
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .markdown-body .ads {
+    margin: 10px 0; /* Adjust spacing for mobile */
+  }
+  .markdown-body .ads iframe {
+    height: 200px; /* Smaller height for mobile, if needed */
+  }
+}
