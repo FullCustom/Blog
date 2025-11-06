@@ -1,3 +1,11 @@
+# All the Best Shops Are Around Back
+
+## Nov 6th, 2025
+
+![Fret Factory](/_img/fretfactory.jpg)
+We have a new store in the neighborhood, the [Fret Factory](https://www.thefretfactory.com/). Dylan, Sam, and the rest of the crew have been working hard to build a great store with a first-class workshop, lesson rooms, and more. Stop by, say hello, and see what they are building. You can find their contact info in the dealer list. They are in the State Street Plaza here in Lemoyne. Just remember, all the best shops are around back. Sam has been a Narwhal Industries fan for a long time. In fact, if you own a two-knob Pineapple Fuzz, Sam may have sold it to you!
+<div style="clear:both"></div>
+
 # The Market Calls
 
 ## Oct 17th, 2025
